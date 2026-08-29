@@ -47,7 +47,7 @@
   .icon-main{background-image:url(img/app-icon.jpg);}
   .icon-2048{background-image:url(img/hedef2048.jpg);}
   .icon-kacis{background-image:url(img/kacis.jpg);}
-  .icon-blocks{background-image:url(img/tempokup.jpg);}
+  .icon-blocks{background-image:url(img/tempoKup.jpg);}
   .icon-potion{background-image:url(img/yakinda.jpg);}
   .hero{flex:0 0 52%; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; padding-top:26px; position:relative;}
   .hero::before{
