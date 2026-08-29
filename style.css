@@ -33,6 +33,7 @@
   .back-btn svg{width:16px;height:16px;}
   .title-block{flex:1; min-width:0;}
   .title-block .game-title{font-family:'Fredoka', sans-serif; font-weight:600; font-size:24px; color:var(--ink); letter-spacing:-.01em;}
+  .app-coin{width:1em; height:1em; vertical-align:-0.15em; object-fit:contain;}
 
   /* =======================================================
      SCREEN: HOME
