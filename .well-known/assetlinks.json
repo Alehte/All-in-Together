@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.alehte.allintogether",
+        "sha256_cert_fingerprints": ["74:8B:36:F5:28:1D:39:62:5B:6B:53:CC:AC:A1:80:F6:F9:E7:32:A2:12:8B:23:4C:3A:73:74:36:E3:58:C3:E7"]
+      }
+    }]
