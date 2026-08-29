@@ -254,7 +254,7 @@
 
   // --- ortak altin cuzdani (tum oyunlar ayni keseyi kullanir) ---
   window.CoinSVG = function(filled){
-    return '<img src="img/jeton.png" alt="" style="opacity:' + (filled ? 1 : .28) + '">';
+    return '<img src="img/jeton.png" alt="" class="app-coin" style="opacity:' + (filled ? 1 : .28) + '">';
 };
   window.AppGold = {
     get(){ return window.AppProgress.gold || 0; },
