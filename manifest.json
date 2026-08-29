@@ -1,1 +1,24 @@
-
+{
+  "name": "All in Together !¡",
+  "short_name": "All in Together",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0B1220",
+  "theme_color": "#0B1220",
+  "icons": [
+    {
+      "src": "img/app-icon.png",
+      "sizes": "923x923",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/app-icon.png",
+      "sizes": "923x923",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
