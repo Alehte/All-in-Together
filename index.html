@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>All in Together !¡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="stage">
+  <div class="stage-label">Android · All in Together !¡</div>
+  <div class="phone">
+    <div class="notch"></div>
+
+    <div class="screens-wrap" id="screensWrap">
+
+      <!-- ============ HOME ============ -->
+      <div class="app-screen" id="screen-home">
+        <div class="hero">
+          <div class="app-icon icon-main"></div>
+          <h1 class="app-title">
+            <span class="word word-all">All</span>
+            <span class="word word-in">in</span>
+            <span class="word word-together">Together</span><span class="word word-punct">!¡</span>
+          </h1>
+        </div>
+
+        <div class="games-section">
+          <div class="games-scroll" id="gamesScroll">
+            <div class="game-card playable" id="cardHedef2048" role="button" tabindex="0">
+              <div class="game-icon icon-2048"></div>
+              <div class="game-label theme-2048">Hedef 2048</div>
+            </div>
+            <div class="game-card playable" id="cardKacis" role="button" tabindex="0">
+              <div class="game-icon icon-kacis"></div>
+              <div class="game-label theme-kacis">Kaçış?</div>
+            </div>
+            <div class="game-card playable" id="cardTempo" role="button" tabindex="0">
+              <div class="game-icon icon-blocks"></div>
+              <div class="game-label theme-blocks">Tempo Küp</div>
+            </div>
+            <div class="game-card playable" id="cardSuSirala" role="button" tabindex="0">
+              <div class="game-icon icon-potion"></div>
+              <div class="game-label theme-potion">Sırala Dur</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gold-pill" id="goldPillHome"></div>
+        <div class="market-row" id="marketRow" role="button" tabindex="0">
+          <span class="bag-wrap"><svg class="bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span>
+          <span class="set-word">Market</span>
+        </div>
+        <div class="settings-row" id="settingsRow" role="button" tabindex="0">
+          <span class="gear-wrap"><svg class="gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09A1.65 1.65 0 0 0 15 4.6a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg></span>
+          <span class="set-word">Ayarlar</span>
+        </div>
+
+        <div class="sheet-backdrop" id="sheetBackdrop"></div>
+        <div class="sheet" id="sheet">
+          <div class="sheet-handle"></div>
+          <div class="sheet-header"><h3>Ayarlar</h3><button class="sheet-close" id="sheetClose">✕</button></div>
+          <div class="set-block">
+            <div class="set-block-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5Z"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>Ses</div>
+            <div class="volume-row"><span class="txt" style="font-size:12.5px;color:var(--ink-on-navy);min-width:56px;">Efektler</span><input type="range" id="sfxSlider" min="0" max="100" value="70"><span class="volume-val" id="sfxVal">70%</span></div>
+            <div class="volume-row" style="margin-top:10px;"><span class="txt" style="font-size:12.5px;color:var(--ink-on-navy);min-width:56px;">Müzik</span><input type="range" id="musicSlider" min="0" max="100" value="45"><span class="volume-val" id="musicVal">45%</span></div>
+            <div class="sheet-note">Müzik parçaları henüz eklenmedi; ayar şimdiden kayıtlı tutuluyor.</div>
+          </div>
+
+          <div class="set-block">
+            <div class="set-block-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M3 9v6M21 9v6"/></svg>Titreşim</div>
+            <div class="set-item">
+              <div class="txt"><div class="t">Titreşim geri bildirimi</div><div class="d">Hatalı hamlede kısa titreşim</div></div>
+              <button class="switch" id="hapticsSwitch" role="switch" aria-checked="true" aria-label="Titreşim"></button>
+            </div>
+          </div>
+
+          <div class="set-block">
+            <div class="set-block-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h8l-1 8 10-12h-8l1-8Z"/></svg>Animasyonlar</div>
+            <div class="set-item">
+              <div class="txt"><div class="t">Animasyonları azalt</div><div class="d">Yağmur, süzülme ve geçiş efektlerini kapatır</div></div>
+              <button class="switch" id="motionSwitch" role="switch" aria-checked="false" aria-label="Animasyonları azalt"></button>
+            </div>
+          </div>
+
+          <div class="set-block">
+            <div class="set-block-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>İlerleme</div>
+            <button class="danger-btn" id="resetBtn">İlerlemeyi Sıfırla</button>
+            <div class="sheet-note">Açılan bölümleri ve 2048 rekorunu siler.</div>
+          </div>
+
+          <div class="set-block">
+            <div class="set-block-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/></svg>Dil</div>
+            <button class="lang-btn" id="langBtn"><span class="flag">🇹🇷</span><span class="lbl">Türkçe</span><span class="chev">›</span></button>
+            <div class="sheet-note">Diğer diller sonraki sürümde eklenecek.</div>
+          </div>
+
+          <div class="set-block" style="margin-bottom:4px;">
+            <div class="set-block-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-5"/><path d="M12 8h.01"/></svg>Hakkında</div>
+            <div class="about-row"><span>Sürüm</span><b>0.1.0</b></div>
+            <div class="about-row"><span>Gizlilik Politikası</span><button class="about-link" id="privacyBtn">Görüntüle</button></div>
+            <div class="sheet-note" id="privacyNote" style="display:none;">Yayına almadan önce buraya gerçek gizlilik politikası bağlantısı eklenmeli.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ HEDEF 2048 — TAHTA SECIMI ============ -->
+      <div class="app-screen" id="screen-2048-boards">
+        <div class="kc-topbar">
+          <button class="back-btn" id="boardsBackBtn" aria-label="Geri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <div class="bd-title">Hedef 2048</div>
+          <div class="gold-pill" id="goldPillBoards"></div>
+        </div>
+        <div class="bd-hint" id="bdHint">Bir tahta seç</div>
+        <div class="bd-screen-dim"></div>
+        <div class="bd-stage" id="bdStage"></div>
+        <button class="bd-back" id="bdBackCenter" aria-label="Seçimi bırak"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      </div>
+
+      <!-- ============ HEDEF 2048 ============ -->
+      <div class="app-screen" id="screen-game-2048">
+        <div class="topbar">
+          <button class="back-btn" id="backBtn2048" aria-label="Geri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <div class="game-title">Hedef 2048</div>
+          <div class="gold-pill compact" id="goldPill2048"></div>
+        </div>
+        <div class="controls-row">
+          <div class="score-row">
+            <div class="score-box current normal" id="scoreBox"><div class="val" id="scoreVal">0</div><div class="lbl">Skor</div></div>
+            <div class="score-box best"><div class="val" id="bestVal">0</div><div class="lbl">Rekor</div></div>
+          </div>
+          <button class="restart-btn" id="restartBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Yeniden</button>
+        </div>
+        <div class="resume-ask" id="resumeAsk">
+          <div class="ra-card">
+            <div class="ra-title" id="raTitle">Kaldığın yerden devam edelim mi?</div>
+            <div class="ra-sub" id="raSub"></div>
+            <div class="ra-btns">
+              <button class="ra-yes" id="raYes">Evet</button>
+              <button class="ra-no" id="raNo">Hayır</button>
+            </div>
+          </div>
+        </div>
+        <div class="board-wrap">
+          <div class="board" id="board">
+            <div class="tile-layer" id="tileLayer"></div>
+            <div class="record-fx" id="recordFx"><div class="edge"></div><div class="core"></div></div>
+            <div class="overlay" id="overlay">
+              <div class="msg" id="overlayMsg">Kaybettin</div>
+              <div class="sub" id="overlaySub">Yeni bir tur deneyelim mi?</div>
+              <button id="overlayBtn">Yeniden Başla</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- devam sorusu 2048 ekranina ait -->
+      <!-- ============ TEMPO KÜP ============ -->
+      <div class="app-screen" id="screen-tempo">
+        <div class="kc-topbar">
+          <button class="back-btn" id="tempoBackBtn" aria-label="Geri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <div class="tp-title">Tempo Küp</div>
+          <div class="gold-pill compact" id="goldPillTempo"></div>
+        </div>
+        <div class="tp-scores">
+          <div class="tp-box cur"><div class="v" id="tpScore">0</div><div class="l">Skor</div></div>
+          <div class="tp-box best"><div class="v" id="tpBest">0</div><div class="l">Rekor</div></div>
+          <button class="tp-hint" id="tpHintBtn" aria-label="İpucu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V18h8v-3.3A7 7 0 0 0 12 2Z"/></svg>
+            <span class="l">İpucu</span>
+            <span class="f"></span>
+          </button>
+        </div>
+        <div class="tp-edge"></div>
+        <div class="tp-board-wrap">
+          <div class="tp-board" id="tpBoard">
+            <div class="tp-over" id="tpOver">
+              <div class="big" id="tpOverBig"></div>
+              <div class="sub" id="tpOverSub"></div>
+              <button id="tpAgain">Yeniden Başla</button>
+            </div>
+          </div>
+        </div>
+        <div class="tp-tray" id="tpTray"></div>
+      </div>
+
+      <!-- ============ KAÇIŞ? LEVEL SELECT ============ -->
+      <!-- ============ KAÇIŞ? MOD SEÇİMİ ============ -->
+<div class="app-screen" id="screen-kacis-mode">
+  <div class="kc-topbar">
+    <button class="back-btn" id="kacisModeBackBtn" aria-label="Geri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <div class="kc-map-title">Kaçış?</div>
+    <div class="gold-pill" id="goldPillMode"></div>
+  </div>
+  <div class="kc-jungle" id="kcModeJungle"></div>
+
+  <div class="kc-mode-wrap">
+    <button class="kc-mode-card" id="kcModeNormal">
+      <div class="kc-mode-icon">
+        <svg viewBox="0 0 40 40" fill="none"><polyline points="8,31 8,21 20,21 20,11 31,11" stroke="#7FDB98" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="29.5" cy="8" r="1.9" fill="#fff"/><circle cx="29.5" cy="14" r="1.9" fill="#fff"/></svg>
+      </div>
+      <div class="kc-mode-text">
+        <div class="kc-mode-name">Bölümler</div>
+        <div class="kc-mode-desc">Yeşil yılanı kurtar</div>
+        <div class="kc-mode-meta" id="kcModeNormalMeta"></div>
+      </div>
+      <svg class="kc-mode-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+
+    <button class="kc-mode-card ozel locked" id="kcModeOzel">
+      <div class="kc-mode-icon">
+        <svg viewBox="0 0 40 40" fill="none"><path d="M20 33C6 24 4 15.5 9 11.4c4-3.3 9-1.5 11 2.1 2-3.6 7-5.4 11-2.1 5 4.1 3 12.6-11 21.6Z" fill="#FFD166" stroke="#E0A93B" stroke-width="2.2" stroke-linejoin="round"/><circle cx="15" cy="17" r="1.6" fill="#8A6A1E"/><circle cx="25" cy="17" r="1.6" fill="#8A6A1E"/></svg>
+      </div>
+      <div class="kc-mode-text">
+        <div class="kc-mode-name">Özel Bölümler</div>
+        <div class="kc-mode-desc">Tüm yılanları çıkar, şekli ortaya çıkar</div>
+        <div class="kc-mode-meta" id="kcModeOzelMeta"></div>
+      </div>
+      <svg class="kc-mode-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+      <svg class="kc-mode-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    </button>
+  </div>
+
+  <div class="kc-rain" id="kcModeRain"></div>
+</div>
+      <!-- ============ KAÇIŞ? ÖZEL BÖLÜM SEÇİMİ ============ -->
+<div class="app-screen" id="screen-kacis-ozel">
+  <div class="kc-topbar">
+    <button class="back-btn" id="kacisOzelBackBtn" aria-label="Geri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <div class="kc-map-title">Özel Bölümler</div>
+    <div class="gold-pill" id="goldPillOzel"></div>
+  </div>
+  <div class="kc-jungle" id="kcOzelJungle"></div>
+  <div class="kc-ozel-wrap"><div class="kc-ozel-grid" id="kcOzelGrid"></div></div>
+  <div class="kc-rain" id="kcOzelRain"></div>
+</div>
+      <div class="app-screen" id="screen-kacis-levels">
+        <div class="kc-topbar">
+          <button class="back-btn" id="kacisLevelsBackBtn" aria-label="Geri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <div class="kc-map-title" id="kcMapTitle">Kaçış?</div>
+          <div class="gold-pill" id="goldPillMap"></div>
+        </div>
+        <div class="kc-jungle" id="kcJungle"></div>
+        <div class="kc-path-wrap" id="kcPathWrap">
+          <div class="kc-path-inner" id="kcPathInner"></div>
+        </div>
+        <div class="kc-rain" id="kcRain"></div>
+      </div>
+
+      <!-- ============ KAÇIŞ? BÖLÜM 1 ============ -->
+      <div class="app-screen" id="screen-kacis-level1">
+        <div class="leaf-corner tl"><svg class="leaf-svg" viewBox="0 0 80 80"><path d="M40 8 C10 20 8 55 40 74 C55 55 55 20 40 8Z" fill="#3FA65C" opacity="0.55"/><path d="M40 8 L40 74" stroke="#2E7D46" stroke-width="2" opacity="0.4"/><path d="M18 30 C4 34 2 55 22 62 C30 50 30 36 18 30Z" fill="#5FBF7A" opacity="0.5"/></svg></div>
+        <div class="leaf-corner tr"><svg class="leaf-svg" viewBox="0 0 80 80"><path d="M40 8 C10 20 8 55 40 74 C55 55 55 20 40 8Z" fill="#3FA65C" opacity="0.55"/><path d="M40 8 L40 74" stroke="#2E7D46" stroke-width="2" opacity="0.4"/><path d="M18 30 C4 34 2 55 22 62 C30 50 30 36 18 30Z" fill="#5FBF7A" opacity="0.5"/></svg></div>
+        <div class="leaf-corner bl"><svg class="leaf-svg" viewBox="0 0 80 80"><path d="M40 8 C10 20 8 55 40 74 C55 55 55 20 40 8Z" fill="#3FA65C" opacity="0.55"/><path d="M40 8 L40 74" stroke="#2E7D46" stroke-width="2" opacity="0.4"/><path d="M18 30 C4 34 2 55 22 62 C30 50 30 36 18 30Z" fill="#5FBF7A" opacity="0.5"/></svg></div>
+        <div class="leaf-corner br"><svg class="leaf-svg" viewBox="0 0 80 80"><path d="M40 8 C10 20 8 55 40 74 C55 55 55 20 40 8Z" fill="#3FA65C" opacity="0.55"/><path d="M40 8 L40 74" stroke="#2E7D46" stroke-width="2" opacity="0.4"/><path d="M18 30 C4 34 2 55 22 62 C30 50 30 36 18 30Z" fill="#5FBF7A" opacity="0.5"/></svg></div>
+
+        <div class="kc-topbar">
+          <button class="back-btn" id="kc1BackBtn" aria-label="Geri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <div class="kc-title-center">
+            <div class="game-title" id="kcLevelTitle">Bölüm 1</div>
+            <div class="kc-goal-sub" id="kcGoalSub">Yeşil Yılanı Kurtar</div>
+          </div>
+            <div class="gold-pill compact" id="goldPillLevel"></div>
+        </div>
+        <div class="kc-hearts" id="kcHearts"></div>
+        <div class="kc-hint-row"><button class="hint-btn" id="kcHintBtn"></button></div>
+        <div class="kc-board-wrap">
+          <div class="kc-board" id="kcBoard">
+            <div class="kc-snake-layer" id="kcSnakeLayer"></div>
+          </div>
+        </div>
+        <div class="kc-intro-splash" id="kcIntroSplash">
+          <div class="kc-intro-title" id="kcIntroTitle"></div>
+          <div class="kc-intro-goal">!Yeşil Yılanı Kurtar!</div>
+        </div>
+        <div class="kc-overlay" id="kcOverlay" style="background:rgba(16,34,22,.62);">
+          <div class="kc-confetti" id="kcConfetti"></div>
+          <div class="kc-big-text" id="kcWinText"></div>
+          <div class="kc-win-gold" id="kcWinGold" style="display:none;"></div>
+        </div>
+        <div class="kc-overlay" id="kcFailOverlay">
+          <div class="kc-big-text" id="kcFailText"></div>
+          <div class="kc-fail-btns">
+            <button class="kc-btn-retry" id="kcRetryBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11A8 8 0 1 0 18 17"/><path d="M20 5v6h-6"/></svg>Tekrar Dene</button>
+            <button class="kc-btn-ad" id="kcAdBtn">▶  Reklam İzle ve Devam Et</button>
+            <button class="kc-btn-back" id="kcBackToMapBtn">Bölümlere Dön</button>
+          </div>
+          <div class="kc-ad-note" id="kcAdNote"></div>
+        </div>
+      </div>
+      <!-- ============================================================
+           SIRALA DUR EKRANLARI
+           ============================================================ -->
+
+<!-- ============ SU SIRALAMA — MOD SEÇİMİ ============ -->
+<div class="app-screen" id="screen-susirala-mode">
+  <div class="kc-topbar">
+    <button class="back-btn" id="ssModeBackBtn" aria-label="Geri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <div class="ss-map-title">Sırala Dur</div>
+    <div class="gold-pill" id="goldPillSsMode"></div>
+  </div>
+  <div class="ss-cel" id="ssModeCol"></div>
+
+  <div class="ss-mode-wrap">
+    <button class="ss-mode-card" id="ssModeNormal">
+      <div class="ss-mode-icon">
+        <svg viewBox="0 0 40 40" fill="none">
+          <path d="M15 5h10v6l6 17a3 3 0 0 1-3 4H12a3 3 0 0 1-3-4l6-17V5Z" stroke="#BFD4F5" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M11.6 24h16.8l2.6 4a3 3 0 0 1-3 4H12a3 3 0 0 1-3-4l2.6-4Z" fill="#6FD3E0"/>
+        </svg>
+      </div>
+      <div class="ss-mode-text">
+        <div class="ss-mode-name">Bölümler</div>
+        <div class="ss-mode-desc">Renkleri kendi şişesinde topla</div>
+        <div class="ss-mode-meta" id="ssModNormalMeta"></div>
+      </div>
+      <svg class="ss-mode-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+
+    <button class="ss-mode-card ozel locked" id="ssModeOzel">
+      <div class="ss-mode-icon">
+        <svg viewBox="0 0 40 40" fill="none">
+          <circle cx="14" cy="16" r="7" fill="#6FD3E0" opacity=".85"/>
+          <circle cx="24" cy="16" r="7" fill="#F2C14E" opacity=".85"/>
+          <circle cx="19" cy="25" r="7" fill="#A05AD6" opacity=".85"/>
+        </svg>
+      </div>
+      <div class="ss-mode-text">
+        <div class="ss-mode-name">Özel Bölümler</div>
+        <div class="ss-mode-desc">Renkler birbirine karışır</div>
+        <div class="ss-mode-meta" id="ssModOzelMeta"></div>
+      </div>
+      <svg class="ss-mode-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+      <svg class="ss-mode-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    </button>
+  </div>
+
+  <div class="ss-yildizlar" id="ssModeStars"></div>
+</div>
+
+<!-- ============ SU SIRALAMA — BÖLÜM HARİTASI ============ -->
+<div class="app-screen" id="screen-susirala-harita">
+  <div class="kc-topbar">
+    <button class="back-btn" id="ssHaritaBackBtn" aria-label="Geri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <div class="ss-map-title">Bölümler</div>
+    <div class="gold-pill" id="goldPillSsHarita"></div>
+  </div>
+  <div class="ss-cel" id="ssHaritaCol"></div>
+  <div class="ss-path-wrap" id="ssPathWrap">
+    <div class="ss-path-inner" id="ssPathInner"></div>
+  </div>
+</div>
+
+<!-- ============ SU SIRALAMA — OYUN ============ -->
+<div class="app-screen" id="screen-susirala-oyun">
+  <div class="kc-topbar">
+    <button class="back-btn" id="ssOyunBackBtn" aria-label="Geri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <div class="ss-title-center">
+      <div class="ss-level-title" id="ssLevelTitle">Bölüm 1</div>
+      <div class="ss-level-sub">Hamle <b id="ssHamle">0</b> · Hedef <b id="ssHedef">0</b></div>
+    </div>
+    <div class="gold-pill compact" id="goldPillSsOyun"></div>
+  </div>
+
+  <div class="ss-cel" id="ssOyunCol"></div>
+
+  <div class="ss-board-wrap">
+    <div class="ss-tahta" id="ssTahta"></div>
+  </div>
+
+  <div class="ss-mesaj" id="ssMesaj"></div>
+  <div class="ss-joker-bar" id="ssJokerBar"></div>
+  <div class="ss-alt-butonlar">
+    <button class="ss-alt-btn" id="ssBastanBtn">
+      <img src="img/joker-bastan-basla.png" alt="Baştan başla">
+    </button>
+  </div>
+
+  <div class="ss-sonuc" id="ssSonuc">
+    <div class="ss-sonuc-kart">
+      <div class="ss-sonuc-yildiz" id="ssSonucYildiz"></div>
+      <div class="ss-sonuc-baslik">Tamamlandı</div>
+      <div class="ss-sonuc-metin" id="ssSonucMetin"></div>
+      <div class="ss-sonuc-odul" id="ssSonucOdul"></div>
+      <button class="ss-sonuc-btn birincil" id="ssSonrakiBtn">Sonraki Bölüm</button>
+      <button class="ss-sonuc-btn" id="ssHaritayaBtn">Bölümlere Dön</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SIRALA DUR — ÖZEL BÖLÜM HARİTASI ============ -->
+<div class="app-screen" id="screen-susirala-ozelharita">
+  <div class="kc-topbar">
+    <button class="back-btn" id="ssoHaritaBackBtn" aria-label="Geri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <div class="ss-map-title">Özel Bölümler</div>
+    <div class="gold-pill" id="goldPillSsoHarita"></div>
+  </div>
+  <div class="ss-cel" id="ssoHaritaCol"></div>
+
+  <div class="sso-harita-wrap">
+    <div class="sso-izgara" id="ssoHaritaIzgara"></div>
+  </div>
+</div>
+
+<!-- ============ SIRALA DUR — ÖZEL OYUN ============ -->
+<div class="app-screen" id="screen-susirala-ozeloyun">
+  <div class="kc-topbar">
+    <button class="back-btn" id="ssoOyunBackBtn" aria-label="Geri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <div class="ss-title-center">
+      <div class="ss-level-title" id="ssoLevelTitle">Özel 1</div>
+      <div class="ss-level-sub">Hamle <b id="ssoHamle">0</b> · Hedef <b id="ssoHedefHamle">0</b></div>
+    </div>
+    <div class="gold-pill compact" id="goldPillSsoOyun"></div>
+  </div>
+
+  <div class="ss-cel" id="ssoOyunCol"></div>
+
+  <!-- renk karisim diyagramini acar -->
+  <button class="sso-dg-btn-ust" id="ssoDiyagramBtn" aria-label="Renk karışımları">
+    <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9.5" r="5.4" fill="#6FD3E0" opacity=".9"/><circle cx="15" cy="9.5" r="5.4" fill="#F2C14E" opacity=".9"/><circle cx="12" cy="15" r="5.4" fill="#A05AD6" opacity=".9"/></svg>
+  </button>
+
+  <!-- hedef renkler -->
+  <div class="sso-hedefler" id="ssoHedefler"></div>
+
+  <!-- ust sira: normal siseler | alt sira: erlenmayerler -->
+  <div class="sso-sahne" id="ssoSahne">
+    <div class="ss-tahta sso-siseler" id="ssoSiseler"></div>
+    <div class="sso-kaplar" id="ssoKaplar"></div>
+  </div>
+
+  <div class="sso-mesaj" id="ssoMesaj"></div>
+
+  <div class="sso-alt-butonlar">
+    <button class="sso-alt-btn" id="ssoGeriBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11A8 8 0 1 0 18 17"/><path d="M20 5v6h-6"/></svg><span>Geri al</span>
+    </button>
+    <button class="sso-alt-btn" id="ssoBastanBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg><span>Baştan</span>
+    </button>
+  </div>
+
+  <div class="sso-sonuc" id="ssoSonuc">
+    <div class="sso-sonuc-kart">
+      <div class="sso-sonuc-yildiz" id="ssoSonucYildiz"></div>
+      <div class="sso-sonuc-baslik">Karışım tamam!</div>
+      <div class="sso-sonuc-metin" id="ssoSonucMetin"></div>
+      <div class="sso-sonuc-odul" id="ssoSonucOdul"></div>
+      <button class="sso-sonuc-btn birincil" id="ssoSonrakiBtn">Sonraki Bölüm</button>
+      <button class="sso-sonuc-btn" id="ssoHaritayaBtn">Bölümlere Dön</button>
+    </div>
+  </div>
+</div>
+
+      <!-- ============ MARKET ============ -->
+      <div class="app-screen" id="screen-market">
+        <div class="kc-topbar">
+          <button class="back-btn" id="marketBackBtn" aria-label="Geri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <div class="mk-title">Market</div>
+          <div class="gold-pill" id="goldPillMarket"></div>
+        </div>
+
+        <div class="mk-ustsekme" id="mkUstSekme">
+          <button data-mod="magaza" class="aktif">Mağaza</button>
+          <button data-mod="envanter">Envanter</button>
+        </div>
+
+        <div class="mk-govde" id="mkGovde">
+
+          <div id="mkMagaza">
+            <div class="mk-noads" id="mkNoAds"></div>
+            <div class="mk-hediye" id="mkHediye"></div>
+
+            <div class="mk-bolum-basligi"><span>Kutular</span></div>
+            <div class="mk-sandiklar" id="mkSandiklar"></div>
+
+            <div class="mk-bolum-basligi">
+              <span>Günün Seçkisi</span>
+              <span class="mk-sayac" id="mkVitrinSayac">--:--:--</span>
+            </div>
+            <div class="mk-vitrin" id="mkVitrin"></div>
+          </div>
+
+          <div id="mkEnvanter" style="display:none;">
+            <div class="mk-sekmeler" id="mkSekmeler"></div>
+            <div class="mk-filtre" id="mkFiltre"></div>
+            <div class="mk-izgara" id="mkIzgara"></div>
+          </div>
+
+        </div>
+
+        <div class="mk-sonuc" id="mkSonuc"></div>
+        <div class="mk-toast" id="mkToast"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Yukleme sirasi onemli: core.js ortak altyapiyi (ekran gecisleri, cuzdan,
+     kayit, ses/titresim) tanimlar; oyun dosyalari bunlarin uzerine kurulur. -->
+<script src="js/core.js"></script>
+<script src="js/marketKatalog.js"></script>
+<script src="js/market.js"></script>
+<script src="js/marketOnizleme.js"></script>
+<script src="js/marketEkran.js"></script>
+<script src="js/hedef2048.js"></script>
+<script src="js/bolumler.js"></script>
+<script src="js/ozel_bolumler.js"></script>
+<script src="js/kacis.js"></script>
+<script src="js/suSirala.js"></script>
+<script src="js/suSiralaBolumler.js"></script>
+<script src="js/suSiralaOzel.js"></script>
+<script src="js/suSiralaJoker.js"></script>
+<script src="js/suSiralaOyun.js"></script>
+<script src="js/suSiralaOzelOyun.js"></script>
+<script src="js/tempoKup.js"></script>
+</body>
+</html>
